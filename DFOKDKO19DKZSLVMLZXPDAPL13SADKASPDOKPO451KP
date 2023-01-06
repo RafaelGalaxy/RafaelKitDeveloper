@@ -1,0 +1,64 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Rafael Hub | Nathanified", "DarkTheme")
+ 
+--| TABS |--
+ 
+local Main = Window:NewTab("Main")
+ 
+
+--| MAIN SECTION (MAIN TAB) |--
+ 
+local MainSection = Main:NewSection("Main")
+ 
+MainSection:NewToggle("Autofarm diamonds", "grabs all diamonds as they spawn", function(state)
+    enabled = false
+    if state then
+        enabled = true
+    else
+        enabled = false
+    end
+    print(enabled)
+    while enabled == true do
+        local Object = game:GetService("Workspace")[".Ignore"][".ServerEffects"]:WaitForChild("Diamond") -- object to tp to
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Object.CFrame
+            wait(0.1)
+        if enabled == false then
+            break
+        end
+    end
+end)
+ 
+MainSection:NewToggle("Autofarm shards", "grabs all shards as they spawn", function(state)
+    enabled = false
+    if state then
+        enabled = true
+    else
+        enabled = false
+    end
+    print(enabled)
+    while enabled == true do
+        local Object = game:GetService("Workspace")[".Ignore"][".ServerEffects"]:WaitForChild("Shard")
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Object.CFrame
+            wait(0.1)
+        if enabled == false then
+            break
+        end
+    end
+end)
+ 
+MainSection:NewToggle("Safe mode", "loop tp far away so you dont get caught autofarming", function(state)
+    enabled = false
+    if state then
+        enabled = true
+    else
+        enabled = false
+    end
+    print(enabled)
+    while enabled == true do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-67.5338287, 219.486725, 2621.48853)
+        wait(0.5)
+        if enabled == false then
+            break
+        end
+    end
+end)
