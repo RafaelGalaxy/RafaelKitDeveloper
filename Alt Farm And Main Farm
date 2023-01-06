@@ -1,0 +1,32 @@
+wait(1)
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Rafael HUB", "DarkTheme")
+
+local Tab = Window:NewTab("ALT Account")
+local Section = Tab:NewSection("ALT Farm")
+
+Section:NewButton("Teleport", "Teleport ALT", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(13462.624, -490.405029, 810.744202, 0.0110488739, -1.74841848e-08, -0.999938965, 3.80756013e-08, 1, -1.70645347e-08, 0.999938965, -3.78847318e-08, 0.0110488739)
+wait(0.1)
+local baseplate = Instance.new("Part")
+baseplate.Parent = workspace
+baseplate.Size = Vector3.new(1,1,1)
+baseplate.Anchored = true
+baseplate.Name = "Baseplate"
+baseplate.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0,-2,0)
+end)
+
+local Tab = Window:NewTab("Main Account")
+local MainSection = Tab:NewSection("Main Farm")
+
+MainSection:NewButton("Teleport", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(13462.624, -490.405029, 810.744202, 0.0110488739, -1.74841848e-08, -0.999938965, 3.80756013e-08, 1, -1.70645347e-08, 0.999938965, -3.78847318e-08, 0.0110488739)
+wait(0.1)
+local baseplate = Instance.new("Part")
+baseplate.Parent = workspace
+baseplate.Size = Vector3.new(80,1,80)
+baseplate.Anchored = true
+baseplate.Name = "Baseplate"
+baseplate.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0,-2,0)
+end)
