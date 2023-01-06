@@ -282,5 +282,19 @@ Tab:AddButton({
 	    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/JustEzpi/ROBLOX-Scripts/main/ROBLOX_AutoClicker"))()
 	end
     })
+    
+    Tab:AddButton({
+		Name = "Main Farm and Alt Farm",
+		Callback = function()
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/RafaelGalaxy/RafaelKitDeveloper/main/Alt%20Farm%20And%20Main%20Farm')))()
+		end
+		})
+		
+		Tab:AddButton({
+		Name = "Rafael Hub V2",
+		Callback = function()
+		    loadstring(game:HttpGet(('https://raw.githubusercontent.com/RafaelGalaxy/RafaelKitDeveloper/main/DFOKDKO19DKZSLVMLZXPDAPL13SADKASPDOKPO451KP')))()
+		    end
+		})
 
 OrionLib:Init()
